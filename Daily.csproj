@@ -69,38 +69,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="FormPages\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="FormPages\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DatabaseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
+    <Compile Include="FormPages\LoginScreen.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Model\DatabaseModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    <Compile Include="FormPages\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DatabaseModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    <Compile Include="FormPages\SignInPage.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Model\DatabaseOperations.cs" />
-    <Compile Include="Model\Users.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\v_login.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    <Compile Include="FormPages\SignInPage.Designer.cs">
+      <DependentUpon>SignInPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginPage.resx">
+    <Compile Include="Register\UserSave.cs" />
+    <EmbeddedResource Include="FormPages\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPages\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPages\SignInPage.resx">
+      <DependentUpon>SignInPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,13 +109,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model\DatabaseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model\DatabaseModel.edmx.diagram">
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -134,16 +124,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\DatabaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\DatabaseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\1100x300-AC_MKC_DI-Cover-Art.png" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +131,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DialogPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red-Exclamation-Mark-PNG-Clipart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
