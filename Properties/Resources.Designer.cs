@@ -73,6 +73,56 @@ namespace Daily.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_20210614_25_11wd8iiz {
+            get {
+                object obj = ResourceManager.GetObject("file-20210614-25-11wd8iiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_20210614_25_1wd8iiz {
+            get {
+                object obj = ResourceManager.GetObject("file-20210614-25-1wd8iiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_20210614_25_1wd8iiz1 {
+            get {
+                object obj = ResourceManager.GetObject("file-20210614-25-1wd8iiz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_20210614_2q5_1wd8iiz {
+            get {
+                object obj = ResourceManager.GetObject("file-20210614-2q5-1wd8iiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_20210614_2q5_1wd8iiz1 {
+            get {
+                object obj = ResourceManager.GetObject("file-20210614-2q5-1wd8iiz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Red_Exclamation_Mark_PNG_Clipart {
             get {
                 object obj = ResourceManager.GetObject("Red-Exclamation-Mark-PNG-Clipart", resourceCulture);

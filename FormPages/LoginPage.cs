@@ -1,13 +1,19 @@
-﻿using System;
+﻿using Daily.FormPages;
+using Daily.Register;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 namespace Daily
@@ -15,10 +21,13 @@ namespace Daily
     public partial class LoginPage : Form
     {
         private bool firstOpen = true;
+        private UserSave SaveData;
+        public bool isVerification = false;
+
         public LoginPage()
         {
             InitializeComponent();
-
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,6 +48,7 @@ namespace Daily
             else
             {
                 LoginButtons.Location = new Point(35, 220);
+
             }
         }
         private void LabelEffect_Click(Object sender, EventArgs e)
@@ -160,12 +170,32 @@ namespace Daily
             {
                 return;
             }
-
-            if (ButtonText.Equals("Sign In"))
+            string UserData = txtName.Text + "¥seulki¥" + txtPass.Text + "¥seulki¥" + txtEma.Text; ;
+            if (ButtonText.Equals("Sign in"))
             {
-                string UserData = txtName.Text + txtPass.Text + txtEma.Text;
+                Verification v = new Verification();
+                v.ShowDialog();
+                if (v.isRealUser)
+                {
+                    MessageBox.Show("Correct");
+                    this.SaveData = new UserSave(UserData, true);
+                }
+                else
+                {
+                    MessageBox.Show("Not user");
+                }
+                
+            }
+            else
+            {
+                this.SaveData = new UserSave(UserData,false );
             }
             
+        }
+
+        public void Reload()
+        {
+
         }
 
         private void txtName_MouseLeave(object sender, EventArgs e)
@@ -182,6 +212,7 @@ namespace Daily
         {
             lblForget.ForeColor = Color.Black;
         }
+
 
         private void pnlLogin_Paint(object sender, PaintEventArgs e)
         {

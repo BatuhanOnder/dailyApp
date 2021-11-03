@@ -11,13 +11,45 @@ namespace Daily.Register
     class UserSave
     {
         private string input;
-        public UserSave(string input)
+        public UserSave(string input,bool choose)
         {
+            string encrypteData;
             this.input = input;
-            string encrypteData = Encrypt();
-            Save(encrypteData);
+            if (choose)
+            {
+                //send mail 
+                
+                encrypteData = Encrypt();
+                Save(encrypteData);
+            }
+            else
+            {
+                encrypteData = Load();
+                if (encrypteData !=null)
+                {
+                    this.input = encrypteData;
+                }
+                
+                string decryptedData = Decrypt();
+
+            }
+            
         }
 
+        private string Load()
+        {
+            try
+            {
+                string contents = File.ReadAllText(Environment.CurrentDirectory + @"\reg.txt");
+                return contents;
+            }
+            catch
+            {
+                return null;
+            }
+            
+            return null;
+        }
         private void Save(string input)
         {
             string path = Environment.CurrentDirectory + @"\reg.txt";

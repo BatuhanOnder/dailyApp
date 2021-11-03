@@ -53,9 +53,29 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Ookii.Dialogs.WinForms, Version=3.0.0.0, Culture=neutral, PublicKeyToken=66aa232afad40158, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.WinForms.3.0.0\lib\net461\Ookii.Dialogs.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Extensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Resources.Extensions.5.0.0\lib\net461\System.Resources.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -75,17 +95,11 @@
     <Compile Include="FormPages\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPages\LoginScreen.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="FormPages\Verification.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPages\LoginScreen.Designer.cs">
-      <DependentUpon>LoginScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPages\SignInPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormPages\SignInPage.Designer.cs">
-      <DependentUpon>SignInPage.cs</DependentUpon>
+    <Compile Include="FormPages\Verification.Designer.cs">
+      <DependentUpon>Verification.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +107,8 @@
     <EmbeddedResource Include="FormPages\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPages\LoginScreen.resx">
-      <DependentUpon>LoginScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPages\SignInPage.resx">
-      <DependentUpon>SignInPage.cs</DependentUpon>
+    <EmbeddedResource Include="FormPages\Verification.resx">
+      <DependentUpon>Verification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -144,6 +155,21 @@
   <ItemGroup>
     <None Include="Resources\warning-16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-20210614-25-1wd8iiz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-20210614-25-11wd8iiz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-20210614-2q5-1wd8iiz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-20210614-2q5-1wd8iiz1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-20210614-25-1wd8iiz1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -153,6 +179,8 @@
     <Error Condition="!Exists('..\packages\cef.redist.x86.94.4.11\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.94.4.11\build\cef.redist.x86.props'))" />
     <Error Condition="!Exists('..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.props'))" />
     <Error Condition="!Exists('..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Resources.Extensions.5.0.0\build\net461\System.Resources.Extensions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Resources.Extensions.5.0.0\build\net461\System.Resources.Extensions.targets'))" />
   </Target>
   <Import Project="..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.94.4.110\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\System.Resources.Extensions.5.0.0\build\net461\System.Resources.Extensions.targets" Condition="Exists('..\packages\System.Resources.Extensions.5.0.0\build\net461\System.Resources.Extensions.targets')" />
 </Project>

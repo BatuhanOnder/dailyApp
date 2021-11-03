@@ -29,29 +29,30 @@ namespace Daily
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.pnl = new System.Windows.Forms.TableLayoutPanel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.pnlName = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.pnlPass = new System.Windows.Forms.Panel();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.LoginButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.lblForget = new System.Windows.Forms.Label();
-            this.btnLogIn = new System.Windows.Forms.Panel();
-            this.lblLoginBtn = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.pnlEma = new System.Windows.Forms.Panel();
-            this.lblEma = new System.Windows.Forms.Label();
-            this.txtEma = new System.Windows.Forms.TextBox();
             this.EmaWarn = new System.Windows.Forms.Label();
             this.PassWarn = new System.Windows.Forms.Label();
+            this.lblEma = new System.Windows.Forms.Label();
             this.NameWarn = new System.Windows.Forms.Label();
+            this.LoginButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogIn = new System.Windows.Forms.Panel();
+            this.lblLoginBtn = new System.Windows.Forms.Label();
+            this.lblForget = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.pnlEma = new System.Windows.Forms.Panel();
+            this.txtEma = new System.Windows.Forms.TextBox();
+            this.pnlPass = new System.Windows.Forms.Panel();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pnlName = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.Cover = new System.Windows.Forms.Panel();
             this.pnl.SuspendLayout();
+            this.pnlLogin.SuspendLayout();
             this.LoginButtons.SuspendLayout();
             this.btnLogIn.SuspendLayout();
-            this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl
@@ -74,78 +75,69 @@ namespace Daily
             this.pnl.Size = new System.Drawing.Size(1136, 584);
             this.pnl.TabIndex = 1;
             // 
-            // txtName
+            // pnlLogin
             // 
-            this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtName.Location = new System.Drawing.Point(51, 50);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 31);
-            this.txtName.TabIndex = 0;
-            this.txtName.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txtName.Leave += new System.EventHandler(this.TextBox_Leave);
-            this.txtName.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.Controls.Add(this.EmaWarn);
+            this.pnlLogin.Controls.Add(this.PassWarn);
+            this.pnlLogin.Controls.Add(this.lblEma);
+            this.pnlLogin.Controls.Add(this.NameWarn);
+            this.pnlLogin.Controls.Add(this.LoginButtons);
+            this.pnlLogin.Controls.Add(this.lblPass);
+            this.pnlLogin.Controls.Add(this.pnlEma);
+            this.pnlLogin.Controls.Add(this.txtEma);
+            this.pnlLogin.Controls.Add(this.pnlPass);
+            this.pnlLogin.Controls.Add(this.txtPass);
+            this.pnlLogin.Controls.Add(this.lblName);
+            this.pnlLogin.Controls.Add(this.pnlName);
+            this.pnlLogin.Controls.Add(this.txtName);
+            this.pnlLogin.Location = new System.Drawing.Point(371, 60);
+            this.pnlLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(394, 463);
+            this.pnlLogin.TabIndex = 0;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
-            // pnlName
+            // EmaWarn
             // 
-            this.pnlName.BackColor = System.Drawing.Color.Silver;
-            this.pnlName.Location = new System.Drawing.Point(50, 82);
-            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(300, 2);
-            this.pnlName.TabIndex = 1;
+            this.EmaWarn.Image = global::Daily.Properties.Resources.warning_16;
+            this.EmaWarn.Location = new System.Drawing.Point(310, 262);
+            this.EmaWarn.Name = "EmaWarn";
+            this.EmaWarn.Size = new System.Drawing.Size(40, 30);
+            this.EmaWarn.TabIndex = 10;
+            this.EmaWarn.Visible = false;
             // 
-            // lblName
+            // PassWarn
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblName.ForeColor = System.Drawing.Color.Silver;
-            this.lblName.Location = new System.Drawing.Point(50, 50);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(139, 31);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Username";
-            this.lblName.Click += new System.EventHandler(this.LabelEffect_Click);
+            this.PassWarn.Image = global::Daily.Properties.Resources.warning_16;
+            this.PassWarn.Location = new System.Drawing.Point(310, 156);
+            this.PassWarn.Name = "PassWarn";
+            this.PassWarn.Size = new System.Drawing.Size(40, 30);
+            this.PassWarn.TabIndex = 9;
+            this.PassWarn.Visible = false;
             // 
-            // txtPass
+            // lblEma
             // 
-            this.txtPass.BackColor = System.Drawing.Color.White;
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPass.Location = new System.Drawing.Point(51, 156);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPass.Multiline = true;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '●';
-            this.txtPass.Size = new System.Drawing.Size(300, 31);
-            this.txtPass.TabIndex = 3;
-            this.txtPass.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txtPass.Leave += new System.EventHandler(this.TextBox_Leave);
-            this.txtPass.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
+            this.lblEma.AutoSize = true;
+            this.lblEma.Enabled = false;
+            this.lblEma.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblEma.ForeColor = System.Drawing.Color.Silver;
+            this.lblEma.Location = new System.Drawing.Point(51, 262);
+            this.lblEma.Name = "lblEma";
+            this.lblEma.Size = new System.Drawing.Size(90, 31);
+            this.lblEma.TabIndex = 6;
+            this.lblEma.Text = "E-Mail";
+            this.lblEma.Visible = false;
+            this.lblEma.Click += new System.EventHandler(this.LabelEffect_Click);
             // 
-            // pnlPass
+            // NameWarn
             // 
-            this.pnlPass.BackColor = System.Drawing.Color.Silver;
-            this.pnlPass.Location = new System.Drawing.Point(50, 188);
-            this.pnlPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlPass.Name = "pnlPass";
-            this.pnlPass.Size = new System.Drawing.Size(300, 2);
-            this.pnlPass.TabIndex = 4;
-            // 
-            // lblPass
-            // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblPass.ForeColor = System.Drawing.Color.Silver;
-            this.lblPass.Location = new System.Drawing.Point(50, 156);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(134, 31);
-            this.lblPass.TabIndex = 1;
-            this.lblPass.Text = "Password";
-            this.lblPass.Click += new System.EventHandler(this.LabelEffect_Click);
+            this.NameWarn.Image = global::Daily.Properties.Resources.warning_16;
+            this.NameWarn.Location = new System.Drawing.Point(310, 50);
+            this.NameWarn.Name = "NameWarn";
+            this.NameWarn.Size = new System.Drawing.Size(40, 30);
+            this.NameWarn.TabIndex = 1;
+            this.NameWarn.Visible = false;
             // 
             // LoginButtons
             // 
@@ -162,20 +154,6 @@ namespace Daily
             this.LoginButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.LoginButtons.Size = new System.Drawing.Size(300, 45);
             this.LoginButtons.TabIndex = 5;
-            // 
-            // lblForget
-            // 
-            this.lblForget.AutoSize = true;
-            this.lblForget.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForget.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblForget.Location = new System.Drawing.Point(3, 0);
-            this.lblForget.Name = "lblForget";
-            this.lblForget.Size = new System.Drawing.Size(94, 45);
-            this.lblForget.TabIndex = 1;
-            this.lblForget.Text = "Are you forgetful?";
-            this.lblForget.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblForget.MouseEnter += new System.EventHandler(this.lblForget_MouseEnter);
-            this.lblForget.MouseLeave += new System.EventHandler(this.lblForget_MouseLeave);
             // 
             // btnLogIn
             // 
@@ -208,28 +186,31 @@ namespace Daily
             this.lblLoginBtn.MouseEnter += new System.EventHandler(this.LoginButtonEffect);
             this.lblLoginBtn.MouseLeave += new System.EventHandler(this.LoginButtonEffectOut);
             // 
-            // pnlLogin
+            // lblForget
             // 
-            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
-            this.pnlLogin.Controls.Add(this.EmaWarn);
-            this.pnlLogin.Controls.Add(this.PassWarn);
-            this.pnlLogin.Controls.Add(this.lblEma);
-            this.pnlLogin.Controls.Add(this.NameWarn);
-            this.pnlLogin.Controls.Add(this.LoginButtons);
-            this.pnlLogin.Controls.Add(this.lblPass);
-            this.pnlLogin.Controls.Add(this.pnlEma);
-            this.pnlLogin.Controls.Add(this.txtEma);
-            this.pnlLogin.Controls.Add(this.pnlPass);
-            this.pnlLogin.Controls.Add(this.txtPass);
-            this.pnlLogin.Controls.Add(this.lblName);
-            this.pnlLogin.Controls.Add(this.pnlName);
-            this.pnlLogin.Controls.Add(this.txtName);
-            this.pnlLogin.Location = new System.Drawing.Point(371, 60);
-            this.pnlLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(394, 463);
-            this.pnlLogin.TabIndex = 0;
-            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+            this.lblForget.AutoSize = true;
+            this.lblForget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForget.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblForget.Location = new System.Drawing.Point(3, 0);
+            this.lblForget.Name = "lblForget";
+            this.lblForget.Size = new System.Drawing.Size(94, 45);
+            this.lblForget.TabIndex = 1;
+            this.lblForget.Text = "Are you forgetful?";
+            this.lblForget.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblForget.MouseEnter += new System.EventHandler(this.lblForget_MouseEnter);
+            this.lblForget.MouseLeave += new System.EventHandler(this.lblForget_MouseLeave);
+            // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblPass.ForeColor = System.Drawing.Color.Silver;
+            this.lblPass.Location = new System.Drawing.Point(50, 156);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(134, 31);
+            this.lblPass.TabIndex = 1;
+            this.lblPass.Text = "Password";
+            this.lblPass.Click += new System.EventHandler(this.LabelEffect_Click);
             // 
             // pnlEma
             // 
@@ -243,20 +224,6 @@ namespace Daily
             this.pnlEma.Visible = false;
             this.pnlEma.Enter += new System.EventHandler(this.TextBox_Enter);
             // 
-            // lblEma
-            // 
-            this.lblEma.AutoSize = true;
-            this.lblEma.Enabled = false;
-            this.lblEma.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEma.ForeColor = System.Drawing.Color.Silver;
-            this.lblEma.Location = new System.Drawing.Point(51, 262);
-            this.lblEma.Name = "lblEma";
-            this.lblEma.Size = new System.Drawing.Size(90, 31);
-            this.lblEma.TabIndex = 6;
-            this.lblEma.Text = "E-Mail";
-            this.lblEma.Visible = false;
-            this.lblEma.Click += new System.EventHandler(this.LabelEffect_Click);
-            // 
             // txtEma
             // 
             this.txtEma.BackColor = System.Drawing.Color.White;
@@ -267,39 +234,72 @@ namespace Daily
             this.txtEma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEma.Multiline = true;
             this.txtEma.Name = "txtEma";
-            this.txtEma.PasswordChar = '●';
             this.txtEma.Size = new System.Drawing.Size(300, 31);
             this.txtEma.TabIndex = 7;
             this.txtEma.Visible = false;
             this.txtEma.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtEma.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
-            // EmaWarn
+            // pnlPass
             // 
-            this.EmaWarn.Image = global::Daily.Properties.Resources.warning_16;
-            this.EmaWarn.Location = new System.Drawing.Point(310, 262);
-            this.EmaWarn.Name = "EmaWarn";
-            this.EmaWarn.Size = new System.Drawing.Size(40, 30);
-            this.EmaWarn.TabIndex = 10;
-            this.EmaWarn.Visible = false;
+            this.pnlPass.BackColor = System.Drawing.Color.Silver;
+            this.pnlPass.Location = new System.Drawing.Point(50, 188);
+            this.pnlPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlPass.Name = "pnlPass";
+            this.pnlPass.Size = new System.Drawing.Size(300, 2);
+            this.pnlPass.TabIndex = 4;
             // 
-            // PassWarn
+            // txtPass
             // 
-            this.PassWarn.Image = global::Daily.Properties.Resources.warning_16;
-            this.PassWarn.Location = new System.Drawing.Point(310, 156);
-            this.PassWarn.Name = "PassWarn";
-            this.PassWarn.Size = new System.Drawing.Size(40, 30);
-            this.PassWarn.TabIndex = 9;
-            this.PassWarn.Visible = false;
+            this.txtPass.BackColor = System.Drawing.Color.White;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtPass.Location = new System.Drawing.Point(51, 156);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '●';
+            this.txtPass.Size = new System.Drawing.Size(300, 31);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.txtPass.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
             // 
-            // NameWarn
+            // lblName
             // 
-            this.NameWarn.Image = global::Daily.Properties.Resources.warning_16;
-            this.NameWarn.Location = new System.Drawing.Point(310, 50);
-            this.NameWarn.Name = "NameWarn";
-            this.NameWarn.Size = new System.Drawing.Size(40, 30);
-            this.NameWarn.TabIndex = 1;
-            this.NameWarn.Visible = false;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblName.ForeColor = System.Drawing.Color.Silver;
+            this.lblName.Location = new System.Drawing.Point(50, 50);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(139, 31);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Username";
+            this.lblName.Click += new System.EventHandler(this.LabelEffect_Click);
+            // 
+            // pnlName
+            // 
+            this.pnlName.BackColor = System.Drawing.Color.Silver;
+            this.pnlName.Location = new System.Drawing.Point(50, 82);
+            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlName.Name = "pnlName";
+            this.pnlName.Size = new System.Drawing.Size(300, 2);
+            this.pnlName.TabIndex = 1;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtName.Location = new System.Drawing.Point(51, 50);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(300, 31);
+            this.txtName.TabIndex = 0;
+            this.txtName.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txtName.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.txtName.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
             // 
             // Cover
             // 
@@ -323,18 +323,19 @@ namespace Daily
             this.Controls.Add(this.Cover);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl.ResumeLayout(false);
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
             this.LoginButtons.ResumeLayout(false);
             this.LoginButtons.PerformLayout();
             this.btnLogIn.ResumeLayout(false);
             this.btnLogIn.PerformLayout();
-            this.pnlLogin.ResumeLayout(false);
-            this.pnlLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
